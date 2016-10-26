@@ -1,0 +1,4 @@
+cron:
+#- description: cron description
+#  url: relative url to your cron view
+#  schedule: cron timing (like: every 1 hours synchronized)

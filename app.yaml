@@ -1,0 +1,54 @@
+application: fakeid  # Using this to run tests and local server
+version: 1
+runtime: python27
+api_version: 1
+threadsafe: true
+
+automatic_scaling:
+  min_idle_instances: 3
+  min_pending_latency: 20ms
+  max_pending_latency: 300ms
+
+handlers:
+- url: /.*
+  script: web.app
+
+
+libraries:
+- name: jinja2
+  version: 2.6
+- name: pycrypto
+  version: 2.6
+- name: PIL
+  version: latest
+- name: markupsafe
+  version: "latest"
+- name: setuptools
+  version: "0.6c11"
+- name: ssl
+  version: "latest"
+
+builtins:
+- deferred: True
+- remote_api: True
+- appstats: True
+
+
+skip_files:
+  - ^(.*/)?app\.yaml
+  - ^(.*/)?app\.yml
+  - ^(.*/)?index\.yaml
+  - ^(.*/)?index\.yml
+  - ^(.*/)?#.*#
+  - ^(.*/)?.*~
+  - ^(.*/)?.*\.py[co]
+  - ^(.*/)?.*/RCS/.*
+  - ^(.*/)?\..*
+  - ^(.*/)?.*\.(bak|scss)$
+  - ^(.*/)?stylesource
+  - ^(.*/)?tests/.*
+  - ^(.*/)?env/.*
+  - ^(.*/)?venv/.*
+  - ^(.*/)?google_appengine/.*
+
+

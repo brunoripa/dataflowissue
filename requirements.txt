@@ -1,0 +1,3 @@
+Flask==0.10.1
+GoogleAppEngineMapReduce==1.9.22.0
+google-api-python-client==1.5.3

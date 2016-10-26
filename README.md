@@ -1,18 +1,18 @@
 'dataflowissue' description
 ============================
 
-To prepare the environment::
+To prepare the environment:
 
     mkvirtualenv google
     pip install -r requirements.txt -t lib
 
-Launch appserver::
+Launch appserver:
 
     dev_appserver.py .
 
 Navigate `http://localhost:8080`
 
-Error::
+Error:
 
     INFO     2016-10-26 11:45:28,427 devappserver2.py:769] Skipping SDK update check.
     INFO     2016-10-26 11:45:28,465 api_server.py:205] Starting API server at: http://localhost:63824
